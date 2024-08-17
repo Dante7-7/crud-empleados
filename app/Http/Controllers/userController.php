@@ -27,6 +27,7 @@ class userController extends Controller
 
     public function home()
     {
-        return view('home'); // Retorna la vista de home
+        // Pasar la variable a la vista
+        return view('home');
     }
 }

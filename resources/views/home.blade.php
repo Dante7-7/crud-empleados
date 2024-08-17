@@ -65,7 +65,7 @@
 
         <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                usuario
+                {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu">
                 <li class="conte-cerrar">
