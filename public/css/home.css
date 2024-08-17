@@ -1,0 +1,282 @@
+body{
+    background: var(--bg-url) no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+}
+.logout{
+    margin: 30px;
+    
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    width: 100px;
+    max-width: 100px;
+    height: 50px;
+    text-decoration: white;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #8b77b9;
+    border: 2px solid #110d17;
+    border-radius: 20px;
+}
+.logout:hover{
+    transition: 0.8s all ease;
+    background:  #d8d0e7;
+}
+/*boton de salir logout*/
+/* Estilos básicos para el enlace de la cabecera */.dropdown-toggle {
+    display: inline-block;
+    padding: 10px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el menú desplegable */.dropdown-menu {
+    display: none; /* Inicialmente oculto */position: absolute;
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    box-shadow: 0px8px16pxrgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para cada elemento del menú */.dropdown-menuli {
+    padding: 8px12px;
+}
+
+/* Estilos para los botones del menú */.dropdown-menulibutton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+/* Mostrar el menú al hacer clic en el enlace */.dropdown.open.dropdown-menu {
+    display: block;
+}
+/*final de logout */
+.conte{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+
+}
+.input_bus{
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    width: 290px;
+    text-decoration: white;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #8b77b9;
+    border: 2px solid #110d17;
+    border-radius: 20px;
+}
+::placeholder {
+    color: #110d17;
+    padding: 10px;
+  }
+  .input_bus:hover{
+    transition: 0.8s all ease;
+    background:  #d8d0e7;
+  }
+.btn_bus{
+    width: 50px;
+    text-align: center;
+    font-weight: bolder;
+    color: #110d17;
+    background:  #8b77b9;
+    border: 2px solid #3f305c;
+    border-radius: 10px; 
+}
+.btn_bus:hover{
+    transition: 1s all ease-in-out;
+    transform: scale(0.91,0.91);
+    box-shadow: 0px 0px 10px #eeeaf4;
+    background: #6d56a1;
+    color: #110d17;
+    border: 3px solid #110d17;
+    border-radius: 10px;
+}
+.btn_eli{
+    position: relative;
+    background: transparent;
+    border: 0px solid transparent;
+    left: -85px;
+    z-index: 10;
+
+}
+.btn_eli:focus {
+    outline: none; /* Quita el borde por defecto */
+    border-color:transparent;
+    box-shadow: 0 0; /* Añade una sombra */
+  }
+
+
+.bton{
+    width: 260px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #110d17;
+    background:  #8b77b9;
+    border: 2px solid #3f305c;
+    border-radius: 10px;
+}
+.bton:hover{
+    transition: 1s all ease-in-out;
+    transform: scale(0.91,0.91);
+    box-shadow: 0px 0px 10px #eeeaf4;
+    background: #6d56a1;
+    color: #110d17;
+    border: 3px solid #110d17;
+    border-radius: 10px;
+}
+
+table{
+    background:transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+
+thead,tbody{
+    color: white;
+}
+
+td{
+    color:white
+}
+.sti_tr:hover{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.01,1.01);
+}
+
+.btn-e-a{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: bolder;
+    color: #110d17;
+    background:  #8b77b9;
+    border: 2px solid #3f305c;
+    border-radius: 10px;
+}
+
+.btn-e-a:hover{
+    transition: 1s all ease-in-out;
+    transform: scale(0.91,0.91);
+    box-shadow: 0px 0px 10px #eeeaf4;
+    background: #6d56a1;
+    color: #110d17;
+    border: 3px solid #110d17;
+    border-radius: 10px;
+}
+
+/*esta parte es la de paginacion*/
+.custom-pagination {
+    background-color: transparent; 
+    border-radius: 5px; 
+    padding: 10px; 
+}
+
+.custom-pagination .page-item {
+    margin: 0 5px; 
+    background-color: transparent;
+}
+
+.custom-pagination .page-link {
+    color: #110d17; 
+    text-decoration: none; 
+    background-color: #6d56a1;
+    border: 0;
+    border-radius: 30px;
+}
+
+.custom-pagination .page-link:focus, .custom-pagination .page-link:hover {
+    background-color: #5a4791; /* Color de fondo al pasar el cursor o enfocar */
+    color: #ffffff; /* Color del texto al pasar el cursor o enfocar */
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #110d17; /* Color de fondo del elemento activo */
+    color: #6d56a1; /* Color del texto del elemento activo */
+    border-color: #110d17; /* Color del borde del elemento activo */
+}
+
+.custom-pagination .page-link[aria-disabled="true"] {
+    background-color: #6d56a1; /* Asegura que las flechas deshabilitadas también tengan el mismo fondo */
+    color: #110d17; /* Color del texto de las flechas deshabilitadas */
+}
+
+.custom-pagination .page-item:first-child .page-link,
+.custom-pagination .page-item:last-child .page-link {
+    border-radius: 30px; /* Ajustar el radio de las esquinas */
+    background-color: #6d56a1; /* Asegura que las flechas tengan el mismo fondo */
+    color: #110d17; /* Asegura que las flechas tengan el mismo color */
+}
+/*confirmacion de eliminar*/
+.custom-confirm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.confirm-content {
+    background-color: #6d56a1;
+    border-radius: 5px;
+    padding: 30px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn-container button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: bolder;
+    color: #110d17;
+    background:  #8b77b9;
+    border: 2px solid #3f305c;
+    border-radius: 10px;
+}
+.imgp{
+    height: 250px;
+    width: 200px;
+}
+
+.btn_elimina:hover{
+    transition: 1s all ease-in-out;
+    transform: scale(0.91,0.91);
+    box-shadow: 0px 0px 10px #eeeaf4;
+    background: #6d56a1;
+    color: #110d17;
+    border: 3px solid #110d17;
+    border-radius: 10px;
+}
+
+

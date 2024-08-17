@@ -1,0 +1,169 @@
+
+.login-page {
+    width: 570px;
+    padding: 4% 0 0;
+    margin: auto;
+  }
+  .login-form{
+    z-index: 2;
+  }
+  .regis{
+    z-index: 2;
+  
+  }
+  h1{
+    font-size: x-large;
+    font-weight: 900; 
+    color: white;
+  }
+  .img1{
+      border-radius: 45%;
+      padding: 20px;
+  }
+  
+  /*card del formulario de inicio y de resgistro*/
+  .form {
+    height: 600px;
+    width: 600px;
+    position: relative;
+    z-index: 1;
+    background: rgb(26, 13, 37);
+    max-width: 600px;
+    margin: 0 auto 80px;
+    padding: 6px;
+    text-align: center;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius:50%;
+    border: 2px solid rgb(18, 8, 26);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*luz que gira en la card*/
+  .form::before{
+    content: "";
+    position: absolute;
+    height: 650px;
+    width: 650px;
+    background-image: conic-gradient(rgb(141, 2, 255) 20deg, transparent 120deg);
+    animation: rota 3s linear infinite;
+  }
+  
+  @keyframes rota{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(-360deg);
+    }
+  }
+  
+  .form::after{
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgb(63, 23, 95);
+    border-radius: 50%;
+    box-shadow: inset 16px 14px 20px #0000008c;
+  
+  }
+  
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+
+    text-decoration: white;
+    width: 65%;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #8b77b9;
+    border: 2px solid #110d17;
+    border-radius: 20px;
+
+    
+  }
+  ::placeholder {
+    color: #110d17;
+  }
+  input:hover{
+    transition: 0.8s all ease;
+    background:  #d8d0e7;
+  }
+  
+  .form button {
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    font-weight: bolder;
+    color: #110d17;
+    background:  #8b77b9;
+    border: 2px solid #3f305c;
+    border-radius: 10px;
+  }
+  .form button:hover,.form button:active,.form button:focus {
+    transition: 1s all ease-in-out;
+    transform: scale(0.91,0.91);
+    box-shadow: 0px 0px 10px #eeeaf4;
+    background: #6d56a1;
+    color: #110d17;
+    border: 3px solid #110d17;
+    border-radius: 10px;
+  }
+  
+  .form .message {
+    margin: 15px 0 0;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .form .message a {
+    color: #0afa12;
+    text-decoration: none;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .container:before, .container:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .container .info {
+    margin: 50px auto;
+    text-align: center;
+  }
+  .container .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+  }
+  .container .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+  }
+  .container .info span a {
+    color: #000000;
+    text-decoration: none;
+  }
+  .container .info span .fa {
+    color: #EF3B3A;
+  }
+  body {
+    background: var(--bg-url) no-repeat center center fixed;   
+  }
+  
