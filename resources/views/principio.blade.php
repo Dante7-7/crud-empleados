@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Hamburguesa</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+    <style>
+        :root {--bg-url: url("{{ asset('img/img.jpg') }}");}
+    </style>
 </head>
 <body>
     <div class="container">
-        <img src="{{asset('img/Russo.png') }}" style="height: 200px">
+        <img src="{{asset('img/logocat.png') }}" style="height:300px;">
 
     </div>
     
@@ -19,7 +23,7 @@
             <li class="list__item">
                 <div class="list__button">
                     <img src="assets/dashboard.svg" class="list__img">
-                    <a href="#" class="nav__link">Inicio</a>
+                    <a href="{{ asset('/') }}" class="nav__link">Inicio</a>
                 </div>
             </li>
 
@@ -59,7 +63,7 @@
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside"></a>
+                        <a href="#" class="nav__link nav__link--inside">link vacio</a>
                     </li>
 
                     <li class="list__inside">

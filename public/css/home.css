@@ -133,6 +133,8 @@ header{
     border-radius: 10px;
 }
 
+/*estilo de tabla */
+
 table{
     background:transparent;
     backdrop-filter: blur(20px);
@@ -171,6 +173,8 @@ td{
     border: 3px solid #110d17;
     border-radius: 10px;
 }
+/*fin de estilo de tabla */
+
 
 /*esta parte es la de paginacion*/
 .custom-pagination {
@@ -267,4 +271,4 @@ td{
     border-radius: 10px;
 }
 
-
+/*fin de estilo de paginacion*/
