@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Hamburguesa</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/027/147/722/original/cute-cat-in-hamburger-cartoon-elements-pro-png.png" type="">
 
     <style>
         :root {--bg-url: url("{{ asset('img/img.jpg') }}");}
