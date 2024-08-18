@@ -8,11 +8,18 @@ body{
 
 
 header{
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color:transparent;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 16px rbga(0,0,0,0.9);;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left:5% ;
 }
 
 /*estilo del la barra y botone de buscar*/

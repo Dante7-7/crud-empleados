@@ -28,19 +28,21 @@
 
 
         }
+        /*este le da color al boton de cerrar sesion */
         .dropdown-menu{
             background:  #8b77b9;
         }
-
+        /*color de la letras del boton o etiqueta (a)*/
         .btna{
             color:white;
             font-weight: bolder;
             
         }
+        /*esto quita el borde que sale por defecto en los botones de boostrac */
         .btna:focus,
         .btna:active{
             color: white; /* Mantén el color del texto */
-            border: 2px solid transparent;
+            border: 0px solid transparent;
         }
 
         .btna:hover{
@@ -71,6 +73,8 @@
 
     
         <h1>Bienvenido</h1>
+
+        <!--este filtra por nombre o apellido-->
         <form action="{{ route('personas.index') }}" method="GET" class="buscador">
             <div class="conte">
                 <input type="text" name="search" class="input_bus" placeholder="Buscar usuario">
@@ -80,7 +84,7 @@
                 </div>
             </div>
         </form>
-
+        <!--este muestra en un pdf todos los empleados o personas que estan en la tabla personas-->
        <form action="{{route('pdftodos')}}" style="margin:30px" target="_blank">
             <div class="pdf">
                 <h5 style="color: white">Archivo PDF Empleados</h5>
@@ -89,7 +93,7 @@
                 </button>
             </div>
         </form>
-
+            <!--este es el que muestra el nombre del administrador que entro y el boton de cerrar sesion-->
         <div class="dropdown">
             <a class="btn dropdown-toggle btna" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-user-circle">  {{ Auth::user()->name }}</i> 
@@ -105,11 +109,11 @@
     </header>
     <center>
 
-
+        <!--boton para agregar personas a la tabla-->
             <div>
                 <button class="bton"><a href="{{ route('personas.create')}}" style="color:white;text-decoration: none;"><i class="fa fa-book"></i> Agregar Usuario</a></button>
             </div>
-        <h1>Tabla personas</h1>
+        <h1>Tabla de personas</h1>
         
             <table class="table table-striped table-hover">
                 <thead>
@@ -126,9 +130,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                        <!--trae a todas las personas-->
                     @foreach ($registros as $registro)
                     <tr class="sti_tr">
                         <td>{{$registro->id}}</td>
+                        <!--trae la imagen del usuario-->
                         <td> <img src="{{ Storage::url($registro->imagen) }}"  style="width: 70px;max-height:50px;object-fit: cover;"></td>
                         <td>{{$registro->name}}</td>
                         <td>{{$registro->lastname}}</td>
