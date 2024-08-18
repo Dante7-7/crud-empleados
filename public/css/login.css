@@ -1,4 +1,14 @@
+/*css de login y de register */
 
+  /*trae la imagen que se muetra en la vista*/
+body {
+  background: var(--bg-url) no-repeat center center fixed;   
+}
+h1{
+  font-size: x-large;
+  font-weight: 900; 
+  color: white;
+}
 .login-page {
     width: 570px;
     padding: 4% 0 0;
@@ -11,18 +21,14 @@
     z-index: 2;
   
   }
-  h1{
-    font-size: x-large;
-    font-weight: 900; 
-    color: white;
-  }
+
   .img1{
       border-radius: 45%;
       padding: 20px;
   }
   
-  /*card del formulario de inicio y de resgistro*/
-  .form {
+/*card del formulario de inicio y de resgistro*/
+.form {
     height: 600px;
     width: 600px;
     position: relative;
@@ -39,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
   /*luz que gira en la card*/
   .form::before{
@@ -50,6 +56,8 @@
     background-image: conic-gradient(rgb(141, 2, 255) 20deg, transparent 120deg);
     animation: rota 3s linear infinite;
   }
+
+  /*esto hace que rote la luz que se ve en lasvistas */
   
   @keyframes rota{
     from{
@@ -87,6 +95,7 @@
 
     
   }
+  /*color para los textos de los input*/
   ::placeholder {
     color: #110d17;
   }
@@ -130,12 +139,12 @@
     text-decoration: none;
   }
   
-  .container {
-    position: relative;
-    z-index: 1;
-    max-width: 300px;
-    margin: 0 auto;
-  }
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
   .container:before, .container:after {
     content: "";
     display: block;
@@ -163,7 +172,4 @@
   .container .info span .fa {
     color: #EF3B3A;
   }
-  body {
-    background: var(--bg-url) no-repeat center center fixed;   
-  }
-  
+

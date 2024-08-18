@@ -22,7 +22,7 @@ class userController extends Controller
         }
 
         // Autenticación fallida
-        return redirect()->route('login')->withErrors(['login_error' => 'Credenciales incorrectas']);
+        return redirect()->route('login')->withErrors(['login_error' => 'Email o Contraseña inconrrecta intentelo nuevamente']);
     }
 
     public function home()
