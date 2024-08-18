@@ -3,18 +3,16 @@
   /*trae la imagen que se muetra en la vista*/
 body {
   background: var(--bg-url) no-repeat center center fixed;   
+
 }
-h1{
-  font-size: x-large;
-  font-weight: 900; 
-  color: white;
-}
+
 .login-page {
-    width: 570px;
+    width: 540px;
     padding: 4% 0 0;
     margin: auto;
   }
   .login-form{
+
     z-index: 2;
   }
   .regis{
@@ -28,7 +26,7 @@ h1{
   }
   
 /*card del formulario de inicio y de resgistro*/
-.form {
+  .form {
     height: 600px;
     width: 600px;
     position: relative;
@@ -45,7 +43,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
   
   /*luz que gira en la card*/
   .form::before{
@@ -53,8 +51,9 @@ h1{
     position: absolute;
     height: 650px;
     width: 650px;
-    background-image: conic-gradient(rgb(141, 2, 255) 20deg, transparent 120deg);
+    background: conic-gradient(rgb(141, 2, 255) 20deg, transparent 120deg);
     animation: rota 3s linear infinite;
+    z-index: -1;
   }
 
   /*esto hace que rote la luz que se ve en lasvistas */
@@ -71,11 +70,12 @@ h1{
   .form::after{
     content: "";
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 585px;
+    height: 585px;
     background: rgb(63, 23, 95);
     border-radius: 50%;
     box-shadow: inset 16px 14px 20px #0000008c;
+    z-index: 0;
   
   }
   
@@ -139,12 +139,12 @@ h1{
     text-decoration: none;
   }
   
-.container {
+  .container {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
-}
+  }
   .container:before, .container:after {
     content: "";
     display: block;
