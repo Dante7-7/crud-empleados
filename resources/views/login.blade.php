@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <title>Login</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <title>Login</title>
+    <style>
+            
             :root {
                 --bg-url: url("{{ asset('img/img.jpg') }}");
             }
@@ -17,16 +17,7 @@
                 font-weight: 900; 
                 color: white;
             }
-            .error {
-                color: red;
-                margin-bottom: 15px;
-            }
-            .modal {
-                z-index: 1057; /* Bootstrap por defecto */
-            }
-            .modal-backdrop {
-                z-index: 1050; /* Backdrop debe estar debajo del modal */
-            }
+
 
             .modal-content,.modal-header,.modal-body,.modal-footer{
                 
@@ -69,22 +60,20 @@
                 justify-content: center;
             }
         </style>
-    </head>
-    <body>
-        <div class="login-page">
-            <div class="form">
-                <form method="POST" action="{{ route('login') }}" class="login-form">
-                    @csrf
-                    <h1>Bienvenido usuario</h1>
-                    <img src="{{ asset('img/catlogin.png') }}" height="120px" width="120px;"><br>
-                    
-                    <input type="email" placeholder="Correo Electrónico" name="email" id="email" required>
-                    <input type="password" placeholder="Contraseña" name="password" id="password" required><br>
-                    <button type="submit">Iniciar</button>
-                    <p class="message">¿No registrado? <a href="{{ route('register') }}">Crea una cuenta</a></p>
-                </form>
-            </div>
-        </div>
+</head>
+<body>
+<div class="login-page">
+    <div class="form">
+            <form method="POST" action="{{ route('login') }}" class="login-form">
+                @csrf
+                <h1>Bienvenido usuario</h1>
+                <img src="{{ asset('img/catlogin.png') }}" height="120px" width="120px;"><br>                    <input type="email" placeholder="Correo Electrónico" name="email" id="email" required>
+                <input type="password" placeholder="Contraseña" name="password" id="password" required><br>
+                <button type="submit">Iniciar</button>
+                <p class="message">¿No registrado? <a href="{{ route('register') }}">Crea una cuenta</a></p>
+            </form>
+    </div>
+</div>
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -98,7 +87,7 @@
                 }
             });
         </script>
-        <center>
+<center>
             @if ($errors->any())
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -122,8 +111,8 @@
                     </div>
                 </div>
             @endif
-        </center>
 
-    </body>
+            </center>
+</body>
 
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
     <title>Registro</title>
     <style>
         /*esto trae la imagen de la carpeta img que esta en la carpeta public */
