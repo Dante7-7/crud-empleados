@@ -18,7 +18,7 @@ class userController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Autenticación exitosa
-            return redirect()->route('home'); // Redirige a la vista de home
+            return redirect()->route('principio'); // Redirige a la vista de home
         }
 
         // Autenticación fallida

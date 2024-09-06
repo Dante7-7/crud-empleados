@@ -8,13 +8,76 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/027/147/722/original/cute-cat-in-hamburger-cartoon-elements-pro-png.png" type="">
 
+    <link rel="stylesheet" href="{{asset('css/principio.css')}}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
     <style>
         :root {--bg-url: url("{{ asset('img/img.jpg') }}");}
+
+         /*este le da color al boton de cerrar sesion */
+         .dropdown-menu{
+            background:  #8b77b9;
+        }
+        .dropdown-container {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            margin: 10px; /* Ajusta el margen según sea necesario */
+        }
+        /*color de la letras del boton o etiqueta (a)*/
+        .btna{
+            color:white;
+            font-weight: bolder;
+            
+        }
+        /*esto quita el borde que sale por defecto en los botones de boostrac */
+        .btna:focus,
+        .btna:active{
+            color: white; /* Mantén el color del texto */
+            border: 0px solid transparent;
+        }
+
+        .btna:hover{
+            color:white;
+        }
+
+        .dropdown-item{
+            color:white;
+            font-weight: bolder;
+        }
+        .dropdown-item:hover{
+            background:  #8b77b9;
+            color:white;
+        }
+
+        h1{
+            margin: 10px;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <img src="{{asset('img/logocat.png') }}" style="height:300px;">
+
+        <div class="dropdown dropdown-container">
+            <a class="btn dropdown-toggle btna" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user-circle">  {{ Auth::user()->name }}</i> 
+            </a>
+            <ul class="dropdown-menu" >
+                <li class="conte-cerrar" >
+                    <button class="dropdown-item" onclick="window.location.href='{{ asset('/') }}'" >
+                    <i class="fas fa-door-open">  Cerrar sesion</i>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
 
     </div>
     
@@ -37,11 +100,11 @@
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Categorias</a>
+                        <a href="{{ route('categorias.index') }}" class="nav__link nav__link--inside">Categorias</a>
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Crear Producto</a>
+                        <a href="{{ route('productos.create') }}" class="nav__link nav__link--inside">Crear Producto</a>
                     </li>
                 </ul>
 
@@ -85,7 +148,7 @@
             <li class="list__item">
                 <div class="list__button">
                     <img src="assets/message.svg" class="list__img">
-                    <a href="{{route('login')}}" class="nav__link" >Clientes</a>
+                    <a href="{{route('personas.store')}}" class="nav__link" >Clientes</a>
                 </div>
             </li>
 
@@ -99,7 +162,8 @@
         </ul>
     </nav>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>

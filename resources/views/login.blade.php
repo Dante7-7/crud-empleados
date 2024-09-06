@@ -67,7 +67,8 @@
             <form method="POST" action="{{ route('login') }}" class="login-form">
                 @csrf
                 <h1>Bienvenido usuario</h1>
-                <img src="{{ asset('img/catlogin.png') }}" height="120px" width="120px;"><br>                    <input type="email" placeholder="Correo Electrónico" name="email" id="email" required>
+                <img src="{{ asset('img/catlogin.png') }}" height="120px" width="120px;"><br>                    
+                <input type="email" placeholder="Correo Electrónico" name="email" id="email" required>
                 <input type="password" placeholder="Contraseña" name="password" id="password" required><br>
                 <button type="submit">Iniciar</button>
                 <p class="message">¿No registrado? <a href="{{ route('register') }}">Crea una cuenta</a></p>
